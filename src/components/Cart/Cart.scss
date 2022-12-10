@@ -1,0 +1,144 @@
+.cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  width: 385px;
+  height: calc(100% - 60px);
+  padding: 30px;
+
+  background-color: #fff;
+
+  &__overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid #DBDBDB;
+    border-radius: 8px;
+
+    &-line {
+      display: block;
+      width: 11px;
+      height: 2px;
+      
+      position: relative;
+
+      background-color: #B5B5B5;
+      transform: rotate(45deg);
+      border-radius: 8px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 2px;
+
+        background-color: #B5B5B5;
+        transform: rotate(90deg);
+        border-radius: 8px;
+      }
+    }
+  }
+
+  &__cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__product {
+    flex-grow: 1;
+  }
+}
+
+.order {
+
+  &__list {
+    margin-bottom: 25px;
+
+    &-item {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-caption {
+      font-size: 16px;
+    }
+
+    &-line {
+      flex: 1;
+      border: 1px dashed #DFDFDF;
+      margin: 0 8px;
+    }
+
+    &-price {
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 100%;
+    padding: 18px 20px;
+    background-color: #9DD558;
+    border-radius: 18px;
+    transition: background-color .2s ease-in-out;
+
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+
+    &-arrow {
+      position: absolute;
+      right: 35px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      transition: background-color .2s ease-in-out;
+      background-color: #abe069;
+    }
+  }
+}

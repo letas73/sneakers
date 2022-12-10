@@ -1,0 +1,80 @@
+.app {
+  padding-top: 70px;
+}
+
+.home {
+  padding-top: 45px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.favorites {
+  padding: 40px 60px 40px 60px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    margin-right: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  &__list {
+    
+  }
+}
+
+.products {
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    padding: 11px 18px;
+
+    border: 1px solid #F3F3F3;
+    border-radius: 10px;
+
+    &-icon {
+      margin-right: 14px;
+    }
+
+    &-input {
+      padding: 0;
+      font-size: 18px;
+      border: none;
+      background-color: transparent;
+
+      &::placeholder {
+        font-size: 14px;
+        color: #C4C4C4;
+      }
+    }
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 210px);
+  column-gap: 40px;
+  row-gap: 50px;
+}
